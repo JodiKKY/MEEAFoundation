@@ -5,7 +5,7 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout/layout.jsx';
 
-import favicon from './assets/favicon.svg'; 
+import favicon from './assets/meeafavicon.svg'; 
 
 
 const setFavicon = (image) => {
