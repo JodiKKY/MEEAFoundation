@@ -50,9 +50,9 @@ const DonatePopup = ({ onClose }) => {
         {/* Details */}
         {method === "bank" ? (
           <div className="text-center space-y-2">
-            <p className="font-semibold text-gray-700">Bank Name: Access Bank</p>
+            <p className="font-semibold text-gray-700">Bank Name: Ecobank</p>
             <p className="font-semibold text-gray-700">
-              Account Number: 0123456789
+              Account Number: **********
             </p>
             <p className="text-gray-500">Account Name: MEEA Foundation</p>
             <p className="text-gray-400 text-sm">Ref: MEEA</p>
