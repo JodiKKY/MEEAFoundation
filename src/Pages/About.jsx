@@ -1,9 +1,11 @@
 import React from "react";
+
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import heroImage from "../assets/meeabackground1.jpg";
-import missionImage from "../assets/IMG_9285.JPG";
-import visionImage from "../assets/IMG_9285.JPG";
+import missionImage from "../assets/IMG_2353.JPG";
+import visionImage from "../assets/IMG_2373.JPG";
+import founderImage from "../assets/Founder.JPG"; 
 import team1 from "../assets/meeabackground1.jpg";
 import team2 from "../assets/Copy of MEEA FOUNDATION.png";
 import team3 from "../assets/IMG_9285.JPG";
@@ -37,7 +39,7 @@ const About = () => {
             About MEEA Foundation
           </h1>
           <p className="text-lg max-w-2xl mx-auto text-pink-100 leading-relaxed">
-            Driven by compassion and purpose — bringing light, hope, and joy to every child in need.
+            Driven by compassion and purpose .Bringing light, hope, and joy to every child in need.
           </p>
         </motion.div>
       </section>
@@ -51,7 +53,7 @@ const About = () => {
             We believe every child deserves love, hope, and the chance to create a brighter tomorrow.
           </p>
           <p className="text-gray-600">
-            Since our founding, we’ve touched lives across Ghana — one child, one community, one dream at a time.
+            Since our founding, we’ve touched lives across Ghana .One child, one community, one dream at a time.
           </p>
         </motion.div>
 
@@ -89,18 +91,53 @@ const About = () => {
         <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Vision</h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            We envision a world where every child, regardless of their background, has access to love,
-            health, and education — a world where compassion drives opportunity.
+            Our vision is to be the light in their dark world, hope to their hopeless situations,
+            be their support, and put smiles on their faces.
           </p>
           <p className="text-gray-600">
-            MEEA Foundation aims to nurture resilience, inspire kindness, and empower the next generation
-            to change their world.
+            At MEEA Foundation, we believe every child deserves love, care, and a chance to dream again. 
+            Through compassion and collective effort, we aim to restore joy and hope ,one heart at a time.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-12 bg-white">
+        <motion.div
+          className="md:w-1/2 flex justify-center"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={founderImage}
+            alt="Founder - Maame Ekua Esuon Acquah"
+            className="rounded-2xl shadow-xl w-full max-w-md object-cover"
+          />
+        </motion.div>
+
+        <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Founder’s Story</h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            MEEA Foundation was inspired by the life and legacy of{" "}
+            <span className="font-semibold text-pink-500">Maame Ekua Esuon Acquah</span> , 
+            a compassionate young woman who lived with sickle cell but never let it define her. 
+            Despite her condition, Maame lived vibrantly and dedicated herself to helping others
+            living with sickle cell, HIV, and cancer.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            She regularly donated to the Cancer, AIDS, and Sickle Cell units at{" "}
+            <span className="font-semibold">Korle Bu Teaching Hospital</span> 
+            and constantly sought ways to uplift the less privileged.  
+            Though she is no longer with us, her light continues to shine through the MEEA Foundation , 
+            as we carry on her mission of love, hope, and humanity.
           </p>
         </motion.div>
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-6 md:px-20 text-center bg-white">
+      <section className="py-20 px-6 md:px-20 text-center bg-pink-50">
         <motion.h2
           className="text-4xl font-bold text-pink-500 mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -112,12 +149,14 @@ const About = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {[{img: team1, name: "Yirenkyi Jodi", role: "Donation Coordinator"},
-            {img: team2, name: "Paul Nti", role: "Community Outreach"},
-            {img: team3, name: "Kelvin Yeboah", role: "IT & Operations"}].map((member, i) => (
+          {[
+            { img: team1, name: "Yirenkyi Jodi", role: "Donation Coordinator" },
+            { img: team2, name: "Paul Nti", role: "Community Outreach" },
+            { img: team3, name: "Kelvin Yeboah", role: "IT & Operations" },
+          ].map((member, i) => (
             <motion.div
               key={i}
-              className="bg-pink-50 rounded-2xl p-6 shadow-md hover:shadow-xl transition-transform hover:-translate-y-2"
+              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
@@ -151,7 +190,7 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Whether through donations, volunteering, or spreading awareness — your support keeps our mission alive.
+          Whether through donations, volunteering, or spreading awareness ,your support keeps our mission alive.
         </motion.p>
         <motion.a
           href="/contact"

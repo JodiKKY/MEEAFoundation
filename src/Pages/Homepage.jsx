@@ -1,45 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import heroImage from "../assets/meeabackground1.jpg";
-import aboutImage from "../assets/IMG_9285.JPG"; // Replace with your image file
+import aboutImage from "../assets/IMG_9285.JPG";
+import meeaLogo from "../assets/meeafavicon.svg";
 import { motion } from "framer-motion";
+import DonatePopup from "../components/DonatePopUp"; 
 
 const Homepage = () => {
+  const [showDonatePopup, setShowDonatePopup] = useState(false);
+  const toggleDonatePopup = () => setShowDonatePopup(!showDonatePopup);
+
   return (
-    <div className="font-[Poppins,sans-serif] bg-pink-50 min-h-screen">
-      
+    <div className="font-[Poppins,sans-serif] bg-pink-50 min-h-screen relative">
+      {/* Navbar */}
       <Navbar />
 
-      
+      {/* Hero Section */}
       <section
         className="h-[90vh] flex flex-col justify-center items-center text-center bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        {/* <div className="absolute inset-0 bg-white bg-opacity-40"></div> */}
-
-       
         <motion.div
-          className="relative z-10 bg-transparent  p-8  shadow-lg"
+          className="relative z-10 bg-transparent p-8 shadow-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold text-pink-600 mb-4 drop-shadow-md">
-            MEEA Foundation ❤️
+          <h1 className="flex items-center justify-center gap-3 text-5xl md:text-6xl font-extrabold text-pink-600 mb-4 drop-shadow-md">
+            <motion.img
+              src={meeaLogo}
+              alt="MEEA Logo"
+              className="w-12 h-12 md:w-14 md:h-14"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+            />
+            MEEA Foundation
           </h1>
+
           <p className="text-white max-w-xl mb-6 text-lg leading-relaxed">
             Spreading love, care, and smiles to children in need.  
             Together, we can make their world a little brighter.
           </p>
-          <Link
-            to="/donate"
+
+          <button
+            onClick={toggleDonatePopup}
             className="bg-pink-400 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-pink-500 transition"
           >
             Donate Now
-          </Link>
+          </button>
         </motion.div>
       </section>
 
@@ -91,12 +103,12 @@ const Homepage = () => {
           Your donation brings hope and happiness to children in need.  
           Every little act of kindness makes a huge difference.
         </p>
-        <Link
-          to="/donate"
+        <button
+          onClick={toggleDonatePopup}
           className="bg-white text-pink-500 px-6 py-3 rounded-full font-semibold hover:bg-pink-100 transition"
         >
           Donate Today
-        </Link>
+        </button>
       </section>
 
       {/* Contact Section */}
@@ -113,6 +125,9 @@ const Homepage = () => {
           Contact Us
         </Link>
       </section>
+
+      {/* Donate Popup */}
+      {showDonatePopup && <DonatePopup onClose={toggleDonatePopup} />}
     </div>
   );
 };
