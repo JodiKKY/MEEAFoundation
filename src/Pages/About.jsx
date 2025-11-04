@@ -5,9 +5,9 @@ import heroImage from "../assets/meeabackground1.jpg";
 import founderImage from "../assets/Founder.JPG";
 import missionImage from "../assets/IMG_2353.JPG";
 import visionImage from "../assets/IMG_2373.JPG";
-import donationVideo from "../assets/donation.mp4"; // 🎥 Add your video file here
+import donationVideo from "../assets/donate.mp4";
 
-const fadeInUp = {
+const fadeIn = {
   initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 1, ease: "easeOut" },
@@ -16,37 +16,38 @@ const fadeInUp = {
 
 const About = () => {
   return (
-    <div className="font-[Poppins,sans-serif] bg-pink-50 min-h-screen">
+    <div className="font-[Poppins,sans-serif] bg-pink-50 min-h-screen text-gray-800">
       <Navbar />
 
       {/* Hero Section */}
       <section
-        className="h-[65vh] flex flex-col justify-center items-center text-center bg-cover bg-center relative"
+        className="h-[70vh] flex flex-col justify-center items-center text-center bg-cover bg-center relative"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <motion.div
-          className="relative z-10 text-white p-8"
+          className="relative z-10 text-white px-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1 }}
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
             About MEEA Foundation
           </h1>
-          <p className="text-lg max-w-2xl mx-auto text-pink-100 leading-relaxed">
-            Driven by compassion and purpose — bringing light, hope, and joy to every child in need.
+          <p className="text-lg max-w-2xl mx-auto text-pink-100">
+            A movement of love and purpose ,dedicated to bringing light, hope,
+            and joy to children and families in need.
           </p>
         </motion.div>
       </section>
 
       {/* Founder’s Story */}
-      <section className="py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-12 bg-white">
+      <section className="py-20 px-6 md:px-20 bg-white flex flex-col md:flex-row items-center gap-12">
         <motion.div
           className="md:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <img
@@ -56,84 +57,93 @@ const About = () => {
           />
         </motion.div>
 
-        <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Founder’s Story</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            The MEEA Foundation was inspired by the remarkable life and legacy of{" "}
-            <span className="font-semibold text-pink-500">Maame Ekua Esuon Acquah</span>, 
-            a compassionate young woman who lived with sickle cell but refused to be defined by it.
+        <motion.div {...fadeIn} className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl font-bold text-pink-500 mb-6">
+            Our Founder’s Story
+          </h2>
+          <p className="text-lg leading-relaxed mb-5">
+            The MEEA Foundation was born out of the life and legacy of{" "}
+            <span className="font-semibold text-pink-500">
+              Maame Ekua Esuon Acquah
+            </span>
+            ,a young woman who lived with sickle cell but chose compassion,
+            faith, and service as her identity.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Despite her challenges, Maame was deeply devoted to helping others living with 
-            sickle cell, HIV, and cancer. She donated frequently to the Cancer, AIDS, 
-            and Sickle Cell Units at <span className="font-semibold">Korle Bu Teaching Hospital</span> 
-            and continuously sought ways to uplift the less privileged.
+          <p className="text-lg leading-relaxed mb-5">
+            Throughout her life, Maame passionately supported the{" "}
+            <span className="font-semibold">Sickle Cell, Cancer, and HIV Units</span> 
+            at Korle Bu Teaching Hospital — donating gifts, supplies, and love to those 
+            who needed it most.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Though she is no longer with us, her legacy of love, hope, and generosity continues 
-            through the MEEA Foundation — a living tribute to her heart for humanity.
+          <p className="text-lg leading-relaxed">
+            Though she is no longer with us, her heart continues to beat through
+            the Foundation that bears her name ,spreading kindness and hope to
+            children across Ghana and beyond.
           </p>
         </motion.div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-12 bg-pink-50">
-        <motion.div {...fadeInUp} className="md:w-1/2">
+      <section className="py-20 px-6 md:px-20 bg-pink-50 flex flex-col md:flex-row items-center gap-12">
+        <motion.div {...fadeIn} className="md:w-1/2">
           <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Mission</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Our mission is to provide care, education, and empowerment for underprivileged children. 
-            We believe that every child deserves love, hope, and the opportunity to build a brighter tomorrow.
+          <p className="text-lg leading-relaxed mb-5">
+            To extend love, care, and educational opportunities to
+            underprivileged children, while empowering families and
+            communities with hope for a better tomorrow.
           </p>
           <p className="text-gray-600">
-            Since our founding, we’ve touched lives across Ghana — one child, one community, one dream at a time.
+            Through outreach, healthcare support, and education, we are
+            rewriting stories — one smile at a time.
           </p>
         </motion.div>
 
         <motion.div
           className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: 80 }}
+          initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <img
             src={missionImage}
-            alt="Our Mission"
+            alt="Mission"
             className="rounded-2xl shadow-xl w-full max-w-md object-cover"
           />
         </motion.div>
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 px-6 md:px-20 flex flex-col-reverse md:flex-row items-center gap-12 bg-white">
+      <section className="py-20 px-6 md:px-20 bg-white flex flex-col-reverse md:flex-row items-center gap-12">
         <motion.div
           className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: -80 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <img
             src={visionImage}
-            alt="Our Vision"
+            alt="Vision"
             className="rounded-2xl shadow-xl w-full max-w-md object-cover"
           />
         </motion.div>
 
-        <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
+        <motion.div {...fadeIn} className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Vision</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Our vision is to bring light to their world, hope to their struggles, and smiles to their faces. 
-            We aim to be a beacon of compassion that transforms pain into possibility.
+          <p className="text-lg leading-relaxed mb-5">
+            To be a beacon of compassion ,bringing light to dark places,
+            hope to broken hearts, and joy to children facing life's toughest
+            challenges.
           </p>
           <p className="text-gray-600">
-            Through collective kindness and unwavering care, MEEA Foundation strives to nurture a world 
-            where every child can dream, thrive, and live with dignity.
+            We envision a world where every child is cared for, valued, and
+            given the chance to live freely, fearlessly, and fully.
           </p>
         </motion.div>
       </section>
 
-      {/* Recent Donation Video Section */}
+      {/* Recent Donation Video */}
       <section className="py-20 px-6 md:px-20 bg-pink-50 text-center">
         <motion.h2
           className="text-4xl font-bold text-pink-500 mb-10"
@@ -146,7 +156,7 @@ const About = () => {
         </motion.h2>
 
         <motion.div
-          className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-pink-100"
+          className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-pink-100"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
@@ -154,7 +164,7 @@ const About = () => {
         >
           <video
             controls
-            className="w-full rounded-2xl"
+            className="w-full h-[450px] object-cover rounded-2xl"
             poster={heroImage}
           >
             <source src={donationVideo} type="video/mp4" />
@@ -163,12 +173,13 @@ const About = () => {
         </motion.div>
 
         <p className="mt-6 text-gray-700 text-lg max-w-2xl mx-auto">
-          Watch highlights from our most recent hospital donation — spreading love, care, and hope to children in need.  
-          Every act of kindness moves us closer to Maame’s dream.
+          A glimpse of love in motion of our recent hospital donation, spreading
+          warmth and joy to children in need. Together, we keep Maame’s vision
+          alive.
         </p>
       </section>
 
-      {/* Footer Call to Action */}
+      {/* Call to Action */}
       <section className="bg-pink-400 text-white py-16 px-6 md:px-20 text-center">
         <motion.h2
           className="text-4xl font-bold mb-4"
@@ -176,7 +187,7 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Be Part of Our Story 💕
+          Be Part of the Change 💕
         </motion.h2>
         <motion.p
           className="max-w-2xl mx-auto mb-6 text-lg leading-relaxed"
@@ -184,8 +195,8 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Whether through donations, volunteering, or spreading awareness — your support 
-          keeps our mission alive and our founder’s dream shining.
+          Whether through donations, volunteering, or partnership ,your support
+          keeps our mission alive and gives hope to many.
         </motion.p>
         <motion.a
           href="/contact"
