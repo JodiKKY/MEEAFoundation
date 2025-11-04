@@ -69,7 +69,7 @@ const About = () => {
             <span className="font-semibold text-pink-500">
               Maame Ekua Esuon Acquah
             </span>
-            — a young woman who lived with sickle cell but chose compassion,
+            , a young woman who lived with sickle cell but chose compassion,
             faith, and service as her identity.
           </p>
           <p className="text-lg leading-relaxed mb-5">

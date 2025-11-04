@@ -71,18 +71,12 @@ const Footer = () => {
               Follow Us
             </h3>
             <ul className="space-y-1 text-sm">
-              <li>
-                <a href="https://www.instagram.com/themeea.foundation/" className="hover:text-pink-500 transition">
+              <li><a href="https://www.instagram.com/themeea.foundation/" className="hover:text-pink-500 transition">
                   Instagram
-                </a>
-              </li>
+                </a></li>
               <li>
                 <a
-                  href="https://snapchat.com/t/ur3ZyTFx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-pink-500 transition"
-                >
+                  href="https://snapchat.com/t/ur3ZyTFx" target="_blank" rel="noopener noreferrer"className="hover:text-pink-500 transition">
                   Snapchat
                 </a>
               </li>
