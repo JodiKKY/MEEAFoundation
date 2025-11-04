@@ -1,6 +1,6 @@
-import React from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/Copy of MEEA FOUNDATION.png"; // replace with your actual image path
+import logo from "../assets/Copy of MEEA FOUNDATION.png"; 
 
 const Footer = () => {
   return (
@@ -72,18 +72,18 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1 text-sm">
               <li>
-                <a href="#" className="hover:text-pink-500 transition">
+                <a href="https://www.instagram.com/themeea.foundation/" className="hover:text-pink-500 transition">
                   Instagram
                 </a>
               </li>
               <li>
                 <a
-                  href="https://m.facebook.com/p/Conceptmabelles-100079546176783/"
+                  href="https://snapchat.com/t/ur3ZyTFx"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-pink-500 transition"
                 >
-                  Facebook
+                  Snapchat
                 </a>
               </li>
               <li>
