@@ -82,7 +82,7 @@ const About = () => {
           </p>
           <p className="text-lg leading-relaxed">
             Though she is no longer with us, her heart continues to beat through
-            the Foundation that bears her name — spreading kindness and hope to
+            the Foundation that bears her name , spreading kindness and hope to
             children across Ghana and beyond.
           </p>
         </motion.div>
@@ -99,7 +99,7 @@ const About = () => {
           </p>
           <p className="text-gray-600">
             Through outreach, healthcare support, and education, we are
-            rewriting stories — one smile at a time.
+            rewriting stories , one smile at a time.
           </p>
         </motion.div>
 
@@ -137,7 +137,7 @@ const About = () => {
         <motion.div {...fadeIn} className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-pink-500 mb-6">Our Vision</h2>
           <p className="text-lg leading-relaxed mb-5">
-            To be a beacon of compassion — bringing light to dark places, hope
+            To be a beacon of compassion , bringing light to dark places, hope
             to the hopeless, and joy to children facing life’s toughest
             challenges.
           </p>
@@ -178,7 +178,7 @@ const About = () => {
         </motion.div>
 
         <p className="mt-6 text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
-          A glimpse of love in action — our recent hospital donation, spreading
+          A glimpse of love in action , our recent hospital donation, spreading
           warmth and joy to children in need. Together, we keep Maame’s vision
           alive.
         </p>
